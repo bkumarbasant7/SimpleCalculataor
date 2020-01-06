@@ -93,7 +93,9 @@ class MainActivity : AppCompatActivity() {
                 // Calculate the result and display
                 val result = expression.evaluate()
                 txtInput.text = result.toString()
+                lastNumeric=true
                 lastDot = true // Result contains a dot
+
             } catch (ex: ArithmeticException) {
                 // Display an error message
                 txtInput.text = "Error"
